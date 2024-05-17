@@ -29,7 +29,6 @@ Follow the steps below to deploy and run the example video processing pipeline a
 
 * A [Koyeb account](https://app.koyeb.com/auth/signup) to build, deploy, and run this application.
 * A web-accessible PostgreSQL database to store content.  You can use [Koyeb's PostgreSQL databases](https://www.koyeb.com/docs/databases) to fulfill this requirement.
-* An [AssemblyAI API key](https://www.assemblyai.com/dashboard/signup) to integrate AI-driven video tagging and classification capabilities.  **Note:** You will need to add credit to your account to use the LLM features implemented in this guide.
 
 ### Deploy using the Koyeb button
 
