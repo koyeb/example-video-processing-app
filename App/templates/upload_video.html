@@ -1,0 +1,24 @@
+<!-- File: App/templates/upload_video.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video App</title>
+</head>
+<body>
+
+    <h1>Video App</h1>
+
+    <p><a href="{% url 'list_videos' %}">Back to Video list</a></p>
+
+    <h3>Upload your video</h3>
+    <form method="post" enctype="multipart/form-data">
+        {%  csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    {{ message }}
+
+</body>
+</html>

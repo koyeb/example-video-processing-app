@@ -1,0 +1,38 @@
+<!-- File: App/templates/list_videos.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video App</title>
+</head>
+<body>
+
+    <h1>Video App</h1>
+
+    <p><a href="{% url 'upload_video' %}">Upload New Video</a></p>
+
+    {% for video in videos %}
+
+        <video controls width='50%' height='50%'>
+            <source src="{{ video.video_file.url }}" type="video/mp4"></source>
+        </video>
+        <h2>{{ video.title }}</h2>
+        <p>Description: {{ video.description }}</p>
+        <p>Tags:
+            {% for tag in video.tags.all %}
+                {{ tag.name }},
+            {% endfor %}
+        </p>
+        <p>Categories:
+            {% for category in video.categories.all %}
+                {{ category.name }},
+            {% endfor %}
+        </p>
+        <p>Duration: {{ video.duration }} seconds</p>
+        <p>Resolution: {{ video.size }}</p>
+
+        <p>-----</p>
+    {% endfor %}
+
+</body>
+</html>
